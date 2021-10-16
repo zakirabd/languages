@@ -16,6 +16,10 @@
                     "view": "VIEW",
                     "fail": "Fail",
                     "pass": "Pass",
+                    "failed": "Failed",
+                    "passed": "Passed",
+                    "pass_grade": "Pass Grade",
+                    "all": "All",
                     "save": "Save",
                     "next": "Next",
                     "update": "UPDATE",
@@ -82,9 +86,26 @@
                     "total_time": "Total Time",
                     "company": "Company",
                     "select_comapny": "Select Company",
-
+                    "result": "Result",
+                    "wrong": "Wrong",
+                    "correct": "Correct",
+                    "company_name": "Company Name",
+                    "country": "Country",
+                    "city": "City",
                     "child": "Child",
                     "select_children": "Select Children",
+                    "group_title": "Group Title",
+                    "class_title": "Class Title",
+                    "class_level": "Class Level",
+                    "exam_title": "Exam Title",
+                    "duartion_minutes": "Duration Minutes",
+                    "retake_exam": "Retike Exams",
+                    "retake_time": "Retake Time",
+                    "question_score": "Question Score",
+                    "save_and_next": "Save & Next",
+                    "save_and_clone": "Save & Clone",
+                    "add_answer": "Add Answer",
+                    "select_status": "Select Status",
                     "months":[
                         "January",
                         "February",
@@ -144,7 +165,25 @@
                             "taken_email": "The email has already been taken.",
                             "password_required": "Password must be at least 8 characters.",
                             "password_match": "The new password confirmation does not match.",
-                            "role_required": "The role is required."
+                            "role_required": "The role is required.",
+                            "grade_required": "The grade must be an integer.",
+                            "company_name_required": "The company name field is required.",
+                            "country_required": "The country field is required.",
+                            "city_required": "The city field is required.",
+                            "group_title_required": "The group title field is required.",
+                            "class_title_required": "The classes title field is required.",
+                            "class_level_required": "The classes level field is required.",
+                            "pass_grade_required": "The pass grade field is required.",
+                            "exam_title_required": "The exam title is required.",
+                            "classes_required": "The course is required.",
+                            "lessons_required": "The lesson is required.",
+                            "type_required": "The type is required",
+                            "question_score_required": "The score is required.",
+                            "question_required": "The questions is required.",
+                            "answer_required": "The answer-1 is required.",
+                            "status_required": "The status is required.",
+                            "file_required": "The file is required."
+
                         }
                     ]
                 }
@@ -313,8 +352,7 @@
                         {"button_13": "Assessment"},
                         {"button_14": "ASSESSMENT Ungraded"},
                         {"button_15": "Resources"},
-                        {"edit_setting": "Edit Setting"},
-                        {"log_out": "Log Out"}
+                        {"edit_setting": "Edit Setting"}
                     ],
                     "body":{
                         "dashboard_page":[
@@ -357,7 +395,9 @@
                             }
                         ],
                         "office_manager_page": [
+
                             {
+                                "no_data": "There is no any office manager",
                                 "add_btn": "Add Office Manager",
                                 "modal":[
                                     "Add office manager",
@@ -371,6 +411,7 @@
                         ],
                         "teachers_page": [
                             {
+                                "no_data": "There is no any teachers",
                                 "add_btn": "Add Teacher",
                                 "modal": [
                                     "Add Teacher",
@@ -385,6 +426,7 @@
                     },
                     "students_page": [
                         {
+                            "no_data": "There is no any students",
                             "add_btn": "Add Student",
                             "personal_info": "Personal info",
                             "enroll": "Enroll",
@@ -415,11 +457,529 @@
                             "raiting": "Raiting"
                         }
                     ],
+                    "check_in_page": [
+                        {
+                            "no_data":"There is no any check in"
+                        }
+                    ],
                     "parent_page":[
                         {
+                            "no_data": "There is no any parent",
                             "add_btn": "Add Parent"
                         }
+                    ],
+                    "exam_results_page":[
+                        {
+                            "no_data":"There is no any exam results"
+                        }
+                    ],
+                    "essays_page":[
+                        {
+                            "no_data":"There is no any essays",
+                            "modal":[
+                                "Essay Reviewed!",
+                                "Thanks for feedback. Please ask your student to see your reviews."
+                            ]
+                        }
+                    ],
+                    "essay_ungraded_page": [
+                        {
+                            "no_data":"There is no any essay ungraded"
+                        }
+                    ],
+                    "speakings_page": [
+                        {
+                            "no_data":"There is no any speaking",
+                            "modal":[
+                                "Speaking Reviewed!",
+                                "Thanks for feedback. Please ask your student to see your reviews."
+                            ]
+                        }
+                    ],
+                    "speaking_ungraded_page": [
+                        {
+                            "no_data":"There is no any speaking ungraded"
+                        }
+                    ],
+                    "assessment_page":[
+                        {
+                            "no_data":"There is no any assessment"
+                        }
+                    ],
+                    "assessment_ungraded_page": [
+                        {
+                            "no_data":"There is no any assessment ungraded"
+                        }
+                    ],
+                    "resources_page":[
+                        {
+                            "no_data":"There is no any resources"
+                        }
                     ]
+
+               }
+           ],
+           "head_teacher_role":[
+               {
+                "nav_bar":[
+                    {"button_1": "Dashborad"},
+                    {"button_2": "Students"},
+                    {"button_3": "Celt Students"},
+                    {"button_4": "Classes"},
+                    {"button_5": "Resources"},
+                    {"button_6": "Exams"},
+                    {"button_7": "Home Works"},
+                    {"button_8": "Check-in"},
+                    {"button_9": "Essays"},
+                    {"button_10": "Celt Essays"},
+                    {"button_11": "Essay Ungraded"},
+                    {"button_12": "Speakings"},
+                    {"button_13": "SP Ungraded"},
+                    {"button_14": "Listenings"},
+                    {"button_15": "Assessment"},
+                    {"edit_setting": "Assessment Ungraded"}
+                ],
+                   "dashboard":[
+                       {
+                           "essay_to_review":{
+                               "title": "Essays To Review",
+                               "no_data": "There is no any essays"
+                           },
+                           "speaking_to_review":{
+                               "title": "Speakings To Review",
+                               "no_data": "Speakings To Review"
+                           }
+                       }
+                   ],
+                   "students_page":[
+                    {
+                        "no_data": "There is no any students",
+                        "edit_student_btns": [
+                            {"btn_1": "Exam Results"},
+                            {"btn_2": "Essay Score"},
+                            {"btn_3": "Home Work"},
+                            {"btn_4": "HW Results"},
+                            {"btn_6": "Speakings"},
+                            {"btn_7": "Certs"},
+                            {"btn_8": "Assessment"}
+                        ],
+                        "add_review_btn": "Add Review",
+                        "review": "Review",
+                        "raiting": "Raiting"
+                    }
+                   ],
+                   "celt_student_page":[
+                       {
+                            "no_data": "There is no any students",
+                            "edit_student_btns": [
+                                {"btn_1": "Exam Results"},
+                                {"btn_2": "Essay Score"},
+                                {"btn_3": "Home Work"},
+                                {"btn_4": "HW Results"},
+                                {"btn_6": "Speakings"},
+                                {"btn_7": "Certs"},
+                                {"btn_8": "Assessment"}
+                            ],
+                            "add_review_btn": "Add Review",
+                            "review": "Review",
+                            "raiting": "Raiting"
+                       }
+                   ],
+                   "classes_page":[
+                       {
+                           "no_data":"There is no any classes"
+                       }
+                   ],
+                   "resources_page":[
+                       {
+                           "no_data":"There is no any resources"
+                       }
+                   ],
+                   "exams_page":[
+                       {
+                           "no_data": "There is no any exams"
+                       }
+                   ],
+                   "homeworks_page":[
+                       {
+                           "no_data": "There is no any home works"
+                       }
+                   ],
+                   "check_in_page":[
+                       {
+                           "no_data": "There is no any check in"
+                       }
+                   ],
+                   "essays_page":[
+                       {
+                           "no_data":"There is no any essays",
+                           "modal":[
+                               "Essay Reviewed!",
+                               "Thanks for feedback. Please ask your student to see your reviews."
+                           ]
+                       }
+                   ],
+                   "celt_essays_page": [
+                       {
+                            "no_data":"There is no any essays",
+                            "modal":[
+                                "Essay Reviewed!",
+                                "Thanks for feedback. Please ask your student to see your reviews."
+                            ]
+                       }
+                   ],
+                   "essays_ungraded_page":[
+                       {
+                           "no_data": "There is no any essay ungraded"
+                       }
+                   ],
+                   "speakings_page": [
+                       {
+                           "no_data": "There is no any speaking",
+                           "modal":[
+                                "Speaking Reviewed!",
+                                "Thanks for feedback. Please ask your student to see your reviews."
+                            ]
+                       }
+                   ],
+                   "speaking_ungraded_page":[
+                       {
+                           "no_data": "There is no any speaking ungraded"
+                       }
+                   ],
+                   "listenings_page": [
+                       {
+                           "no_data": "There is no any listenings"
+                       }
+                   ],
+                   "assessment_page":[
+                       {
+                           "no_data":"There is no any assessment"
+                       }
+                   ],
+                   "assessment_ungraded_page":[
+                       {
+                           "no_data":"There is no any assessment ungraded"
+                       }
+                   ]
+
+               }
+           ],
+           "parent_role":[
+               {
+                    "nav_bar":[
+                        {"button_1": "Dashborad"},
+                        {"button_2": "Teachers Reviews"},
+                        {"button_3": "Check-in"},
+                        {"button_4": "Exam Results"},
+                        {"button_5": "Resources"},
+                        {"button_6": "HW Results"},
+                        {"button_7": "Home Works"},
+                        {"button_8": "Certificate"}
+                    ],
+                    "teachers_reviews_page": [
+                        {
+                            "no_data": "Tere is no any teacher review"
+                        }
+                    ],
+                    "check_in_page":[
+                        {
+                            "no_data":"There is no any check in"
+                        }
+                    ],
+                    "exam_results_page":[
+                        {
+                            "no_data":"There is no any exam results"
+                        }
+                    ],
+                    "hw_results_page":[
+                        {
+                            "no_data":"There is no any home work results"
+                        }
+                    ],
+                    "certificate_page":[
+                        {
+                            "no_data": "There is no any certificate"
+                        }
+                    ]
+               }
+           ],
+           "teacher_manager_role":[
+               {
+                    "nav_bar":[
+                        {"button_1": "Dashborad"},
+                        {"button_2": "Check-In"},
+                        {"button_3": "Teachers"},
+                        {"button_4": "Students"},
+                        {"button_5": "Resources"}
+                    ],
+                    "dashboard": [
+                        "Students",
+                        "Students SUB",
+                        "Exams",
+                        "Exam SUB",
+                        "Check-In",
+                        "Reports",
+                        "Essays",
+                        "Speakings",
+                        "Homework's",
+                        "All Companies"
+                    ],
+                    "check_in_page":[
+                        {
+                            "no_data":"There is no any check in"
+                        }
+                    ],
+                    "teachers_page":[
+                        {
+                            "no_data": "There is no any teacher"
+                        }
+                    ],
+                    "student_page":[
+                        {
+                            "no_data": "There is no any students",
+                            "sub_pages": [
+                                {"btn_1": "Exam Score"},
+                                {"btn_2": "Essay Score"},
+                                {"btn_3": "HW Results"}
+                            ]
+                        }
+                    ],
+                    "resources_page":[
+                        {
+                            "no_data":"There is no any resources"
+                        }
+                    ]
+
+               }
+           ],
+           "super_admin_role":[
+               {
+                   "nav_bar":[
+                       {"btn_1": "Dashboard"},
+                       {"btn_2": "Manage Companies"},
+                       {"btn_3": "Manage Managers"},
+                       {"btn_4": "Manage Teachers"},
+                       {"btn_5": "Manage Students"},
+                       {"btn_6": "Manage Groups"},
+                       {"btn_7": "Manage Parents"},
+                       {"btn_8": "Manage Allocations"},
+                       {"btn_9": "Manage Courses"},
+                       {"btn_10": "Manage Lessons"},
+                       {"btn_11": "Manage Staff"},
+                       {"btn_12": "Exams"},
+                       {"btn_13": "Essays"},
+                       {"btn_14": "Speakings"},
+                       {"btn_15": "Listenings"},
+                       {"btn_16": "Resources"}
+                   ],
+                   "dashboard":[
+                       {
+                           "total_exam_status": {
+                               "title": "Total Exam Status",
+                               "row_1": "Total Exams Taken",
+                               "row_2": "Yesterday",
+                               "row_3": "Last Month Exams",
+                               "row_4": "Last Year Exams"
+                           },
+                           "total_essay_status": {
+                                "title": "Total Essays Status",
+                                "row_1": "Total Essays Taken",
+                                "row_2": "Yesterday",
+                                "row_3": "Last Month Essays",
+                                "row_4": "Last Year Essays"
+                            },
+                            "assessment": {
+                                "title": "Assessment",
+                                "row_1": "Assessment",
+                                "row_2": "Yesterday",
+                                "row_3": "Last Month Assessment",
+                                "row_4": "Last Year Assessment"
+                            },
+                            "total_speaking_status": {
+                                "title": "Total Speakings status",
+                                "row_1": "Total Speakings status",
+                                "row_2": "Yesterday",
+                                "row_3": "Last Month Speakings",
+                                "row_4": "Last Year Speakings"
+                            }
+                       }
+                   ],
+                   "manage_company_page": [
+                       {
+                            "add_company": "Add Company",
+                            "edit_company": "Edit Company",
+                            "no_data": "There is no any company",
+                            "popUp": [
+                                "Company Added Successfully",
+                                "Company Edited Successfully"
+                            ]
+                       }
+                   ],
+                   "manage_managers_page": [
+                       {
+                           "add_manager": "Add Manager",
+                           "edit_manager": "Edit Manager",
+                           "no_data": "There is no any manager",
+                           "popUp":[
+                               "Manager added successfully",
+                               "Manager edited successgully"
+                           ]
+
+                       }
+                   ],
+                   "manage_teachers_page":[
+                       {
+                           "edit_teacher": "Edit Teacher",
+                           "no_data": "There is no any teacher",
+                           "popUp": [
+                               "Teacher Edit Successfully"
+                           ]
+                       }
+                   ],
+                   "manage_students_page": [
+                       {
+                            "personal_info": "Personal info",
+                            "enroll": "Enroll",
+                            "enroll_course_btn": "Enroll a Course",
+                            "allocate_teacher": [
+                                {
+                                    "title": "Allocate a teacher",
+                                    "btn": "Add Allocate a Teacher",
+                                    "modal": [
+                                        "Add Allocate a Teacher",
+                                        "Select Teacher",
+                                        "Select Lesson Mode"
+                                    ]
+                                }
+                            ],
+                            "edit_student_btns": [
+                                {"btn_1": "Exam Results"},
+                                {"btn_2": "Essay Score"},
+                                {"btn_3": "Home Work"},
+                                {"btn_4": "HW Results"},
+                                {"btn_5": "Unlock Exams"},
+                                {"btn_6": "Speakings"},
+                                {"btn_7": "Certs"},
+                                {"btn_8": "Assessment"}
+                            ],
+                            "add_review_btn": "Add Review",
+                            "review": "Review",
+                            "raiting": "Raiting"
+                       }
+                   ],
+                   "manage_groups_page":[
+                       {
+                           "add_group": "Add Group",
+                           "edit_group": "Edit Group",
+                           "popUp": [
+                                "Group Added Successfully",
+                                "Group Edited Successfully"
+                           ],
+                           "no_data":"There is no any group"
+                       }
+                   ],
+                   "manage_parents_page": [
+                       {
+                           "edit_parent": "Edit Parent",
+                            "no_data": "There is no any parent",
+                            "popUp": [
+                                "Parent Edit Successfully"
+                            ]
+                       }
+                   ],
+                   "manage_allocate_page":[
+                       {
+                           "enroll_course": "Enroll a Course",
+                           "popUp": "Course Assign Successfully"
+                       }
+                   ],
+                   "manage_courses_page": [
+                       {
+                           "add_courses": "Add Classes",
+                           "edit_courses": "Edit Classes",
+                            "sub_pages":[
+                                {"page_1": "Summary"},
+                                {"page_2": "Lesson"},
+                                {"page_3": "Essays"},
+                                {"page_4": "Speakings"},
+                                {"page_5": "Listenings"},
+                                {"page_6": "Exams"}
+                            ]
+                       }
+                   ],
+                   "manage_lessons_page":[
+                       {
+                           "add_lessons": "Add Lessons",
+                           "edit_lessons": "Edit Lessons",
+                           "popUp": [
+                               "Lesson Added Successfully",
+                               "Lesson Edited Successfully"
+                           ]
+                       }
+                   ],
+                   "manage_staff_page":[
+                       {
+                           "add_staff": "Add Staff",
+                           "edit_staff": "Edit Staff",
+                           "popUp":[
+                               "Staff updated successfully",
+                               "Staff created successfully"
+                           ]
+                       }
+                   ],
+                   "exams_page":[
+                       {
+                           "add_exams": "Add Exam",
+                           "edit_exams": "Edit An Exam",
+                           "create_exam": "Create an Exam",
+                           "basic": "Basic",
+                           "questions": "Questions",
+                           "add_parent_question_btn": "Add Parent Question",
+                           "add_question_btn": "Add Question",
+                           "add_parent_question": "Add a Parent question",
+                           "add_question": "Add a exam question",
+                           "edit_parent_question": "Edit a Parent question",
+                           "edit_question": "Edit a exam question"
+                       }
+                   ],
+                   "essays_page": [
+                       {
+                           "add_essay": "Add Essay",
+                            "edit_essay": "Edit Essay",
+                            "popUp": [
+                                "Essay Added Successfully",
+                                "Essay Edited Successfully"
+                            ],
+                            "no_data": "There is no any essay"
+                       }
+                   ],
+                   "speakings_page": [
+                       {
+                           "add_speaking": "Add Speaking",
+                           "edit_speaking": "Edit Speaking",
+                           "popUp": [
+                                "Speaking Added Successfully",
+                                "Speaking Edited Successfully"
+                            ],
+                            "no_data": "There is no any speaking"
+                       }
+                   ],
+                   "listenings_page":[
+                       {
+                           "no_data":"There is no any listening"
+                       }
+                   ],
+                   "resources_page": [
+                       {
+                           "add_resources": "Add Resources",
+                           "edit_resources": "Edit Resources",
+                           "popUp": [
+                               "Resources Added Successfully",
+                               "Resources Edited Successfully"
+                           ]
+                       }
+                   ]
 
                }
            ]
